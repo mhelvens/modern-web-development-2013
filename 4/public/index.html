@@ -23,6 +23,7 @@
 		<button class="btn btn-primary" ng-click="add()">Add item</button>
 		<button class="btn btn-default" btn-checkbox ng-model="editTasks">Edit tasks</button>
 		<button class="btn btn-default" btn-checkbox ng-model="hideDone">Hide finished tasks</button>
+        <div class="padding"><div>&nbsp;</div></div>
 	</div>
 	<ul>
 		<li ng-repeat="(i, item) in list | filter:showItem">
