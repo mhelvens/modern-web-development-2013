@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="Modern Webdevelopment 4">
+<head>
+	<title>Modern Webdevelopment 4</title>
+
+	<script src="../bower_components/jquery/jquery.js"></script>
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular-animate.js"></script>
+	<script src="ListController.js"></script>
+
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body ng-controller="ListController">
+
+
+<h1>List of stuff:</h1>
+
+<div class="task-list">
+	<div class="btn-group" data-toggle="buttons">
+		<button class="btn btn-primary" ng-click="add()">Add item</button>
+		<button class="btn btn-default" btn-checkbox ng-model="editTasks">Edit tasks</button>
+		<button class="btn btn-default" btn-checkbox ng-model="hideDone">Hide finished tasks</button>
+	</div>
+	<ul>
+		<li ng-repeat="(i, item) in list | filter:showItem">
+			<div ng-class="{done: item.done}">
+				<label>
+					<input type="checkbox" ng-model="item.done">
+					<span ng-if="!editTasks">{{item.text}}</span>
+				</label>
+				<input type="text" ng-if="editTasks" ng-model="item.text">
+			</div>
+		</li>
+	</ul>
+</div>
+
+</body>
+</html>

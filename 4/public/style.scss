@@ -1,0 +1,116 @@
+//// SASS Bootstrap ////
+@import "../bower_components/sass-bootstrap/lib/bootstrap";
+
+//// Our own CSS ////
+$task-width : 310px;
+
+body {
+	padding-left : 30px;
+
+	h1 {
+		width         : $task-width;
+		margin-bottom : 10px;
+		border        : 1px solid $list-group-border;
+		padding       : 6px;
+		font-family   : serif;
+		text-align    : center;
+		border-radius : $list-group-border-radius;
+	}
+}
+
+div.task-list {
+	width         : $task-width;
+	overflow      : visible;
+	align-content : center;
+
+	div.btn-group > .btn {
+		@include border-bottom-radius(0);
+		border-color: $btn-default-border !important;
+	}
+
+	ul {
+		@extend .list-group;
+		margin-top : -1px;
+
+		& > li {
+			display : block;
+
+			&:last-child div {
+				@include border-bottom-radius($list-group-border-radius);
+			}
+
+			& > div {
+				display        : block;
+				vertical-align : middle;
+				padding        : 4px 10px;
+				margin-bottom  : -1px;
+				border         : 1px solid $list-group-border;
+				width          : $task-width;
+				height         : 32px !important;
+				opacity        : inherit;
+
+				& > label {
+					& > input[type="checkbox"] {
+						float         : left;
+						margin-top    : 5px !important;
+						margin-right  : 8px !important;
+						margin-left   : 0px !important;
+						margin-bottom : 5px !important;
+						cursor        : pointer;
+					}
+
+					display : block;
+					margin  : 0px;
+					padding : 0px;
+					cursor  : pointer;
+
+					span {
+						display     : block;
+						padding-top : 2px;
+						font-weight : bold;
+						cursor      : pointer;
+					}
+				}
+
+				& > input[type="text"] {
+					font-size     : 90%;
+					border        : dotted 1px gray;
+					margin        : 0px;
+					padding       : 1px 5px;
+					border-radius : $list-group-border-radius;
+				}
+
+				&.done > label {
+					text-decoration : line-through;
+					color           : gray;
+				}
+			}
+
+			//// Transition duration
+			//
+			&.ng-enter, &.ng-leave, &.ng-move {
+				transition : all .6s ease;
+			}
+
+			//// When the element is gone
+			//
+			&.ng-enter, &.ng-leave.ng-leave-active {
+				opacity     : 0;
+				margin-left : 1.5 * $task-width;
+			}
+
+			//// When the element is present
+			//
+			&.ng-leave, &.ng-enter.ng-enter-active {
+				opacity     : 1;
+				margin-left : 0;
+			}
+
+			//// Animate one element at a time
+			//
+			&.ng-enter-stagger, &.ng-leave-stagger {
+				transition-delay : .05s;
+			}
+		}
+	}
+}
