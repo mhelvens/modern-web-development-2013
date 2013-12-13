@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ModernWebDevelopment.iml" filepath="$PROJECT_DIR$/.idea/ModernWebDevelopment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modern-web-development-2013.iml" filepath="$PROJECT_DIR$/.idea/modern-web-development-2013.iml" />
     </modules>
   </component>
 </project>
