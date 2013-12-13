@@ -20,3 +20,4 @@ Here are some of the links that I (mentioned|will mention) during the presentati
 - [My Blogpost](http://www.mhelvens.net/personal/blog/web-app-development-choices) ([comments here](https://plus.google.com/116129313585072004834/posts/X31hP9AupUz) and [here](https://www.facebook.com/mhelvens/posts/602381493153264)); it contains many links to official websites for webtechnologies.
 - [Crockford on JavaScript videos](http://www.youtube.com/playlist?list=PL7664379246A246CB)
 - [Twitter Bootstrap Tutorial](http://www.youtube.com/watch?list=PLA615C8C2E86B555E)
+- [Quick Introduction to MongoDB in Node.js](http://www.youtube.com/watch?v=L6i4v-nPteg)
