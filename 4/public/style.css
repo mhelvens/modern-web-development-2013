@@ -5000,7 +5000,7 @@ td.visible-print {
 body {
   padding-left: 30px; }
   body h1 {
-    width: 310px;
+    width: 400px;
     margin-bottom: 10px;
     border: 1px solid #dddddd;
     padding: 6px;
@@ -5009,13 +5009,36 @@ body {
     border-radius: 4px; }
 
 div.task-list {
-  width: 310px;
+  width: 400px;
   overflow: visible;
   align-content: center; }
-  div.task-list div.btn-group > .btn {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-color: #cccccc !important; }
+  div.task-list div.btn-group {
+    overflow: hidden; }
+    div.task-list div.btn-group > .btn {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      border-color: #cccccc !important;
+      display: block;
+      float: left !important; }
+      div.task-list div.btn-group > .btn:nth-last-child(2) {
+        margin-right: -3px; }
+    div.task-list div.btn-group > .padding {
+      margin-bottom: 0;
+      font-weight: normal;
+      background-image: none;
+      border: 1px #cccccc;
+      border-style: solid solid solid none;
+      padding: 6px 12px;
+      font-size: 14px;
+      line-height: 1.42857;
+      border-radius: 4px;
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+      border-radius: 0px 4px 0px 0px;
+      background-color: #eeeeee;
+      overflow: hidden; }
+      div.task-list div.btn-group > .padding div {
+        width: 399px; }
   div.task-list ul {
     margin-top: -1px; }
     div.task-list ul > li {
@@ -5029,7 +5052,7 @@ div.task-list {
         padding: 4px 10px;
         margin-bottom: -1px;
         border: 1px solid #dddddd;
-        width: 310px;
+        width: 400px;
         height: 32px !important;
         opacity: inherit; }
         div.task-list ul > li > div > label {
@@ -5062,7 +5085,7 @@ div.task-list {
         transition: all .6s ease; }
       div.task-list ul > li.ng-enter, div.task-list ul > li.ng-leave.ng-leave-active {
         opacity: 0;
-        margin-left: 465px; }
+        margin-left: 600px; }
       div.task-list ul > li.ng-leave, div.task-list ul > li.ng-enter.ng-enter-active {
         opacity: 1;
         margin-left: 0; }

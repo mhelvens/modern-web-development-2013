@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="TodoApp">
+<head>
+    <title>TODO App</title>
+
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="todo.js"></script>
+
+    <link type="text/css" href="style.css" rel="stylesheet">
+</head>
+<body ng-controller="TodoController">
+
+<h1>Cool TODO App</h1>
+
+<h2>What to do?</h2>
+
+<button ng-click="add()">Add New Task</button>
+<label><input type="checkbox" ng-model="editmode"> Edit Mode</label>
+<label><input type="checkbox" ng-model="hidefinished"> Hide Finished Tasks</label>
+
+<ul id="list">
+    <li ng-repeat="item in items | filter:doneitems">
+        <input type="checkbox" ng-model="item.done"/>
+        <span ng-if="!editmode">{{item.title}}</span>
+        <input type="text" ng-model="item.title" ng-if="editmode">
+    </li>
+</ul>
+
+</body>
+</html>

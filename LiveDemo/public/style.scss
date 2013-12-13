@@ -1,0 +1,35 @@
+$color: black;
+$hovercolor: red;
+
+
+h1 {
+  text-decoration: underline;
+
+  color: $color;
+
+  transition: all 1s;
+
+  &:hover {
+    color: $hovercolor;
+    margin-left: 30px;
+  }
+}
+
+#list > ul > li {
+
+  &.ng-enter, &.ng-leave {
+    transition: all .6s;
+  }
+
+  &.ng-enter,
+  &.ng-leave.ng-leave-active {
+    opacity     : 0;
+    margin-left: 300px;
+  }
+
+  &.ng-leave,
+  &.ng-enter.ng-enter-active {
+    opacity     : 1;
+  }
+
+}
