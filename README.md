@@ -1,7 +1,7 @@
-Modern Web Development 2013 - Presenation
-=========================================
+Modern Web Development 2013
+===========================
 
-This repository contains the code I used and wrote during my live demo at LIACS on 13 December 2013.
+This is the github repository of a presentation and live demo I gave at LIACS, Leiden University in December 2013. This repository contains the code I used and wrote during the live demo.
 
 We developed at a simple application in 4 stages:
 
